@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "build2": "ng build --prod --project=@doroteati/mia-category-core && cd dist/doroteati/mia-category-core/ && npm publish --access public",
-    "build3": "ng build --prod --project=@doroteati/mia-category-editor && cd dist/doroteati/mia-category-editor/ && npm publish --access public",
+    "build2": "ng build --configuration production --project=@doroteati/mia-category-core && cd dist/doroteati/mia-category-core/ && npm publish --access public",
+    "build3": "ng build --configuration production --project=@doroteati/mia-category-editor && cd dist/doroteati/mia-category-editor/ && npm publish --access public",
     "test": "ng test"
   },
   "private": true,

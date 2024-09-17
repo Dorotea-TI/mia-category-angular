@@ -6,23 +6,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@dorototeati/mia-category-core": {
+    "@doroteati/mia-category-core": {
       "projectType": "library",
-      "root": "projects/dorototeati/mia-category-core",
-      "sourceRoot": "projects/dorototeati/mia-category-core/src",
+      "root": "projects/doroteati/mia-category-core",
+      "sourceRoot": "projects/doroteati/mia-category-core/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/dorototeati/mia-category-core/ng-package.json"
+            "project": "projects/doroteati/mia-category-core/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/dorototeati/mia-category-core/tsconfig.lib.prod.json"
+              "tsConfig": "projects/doroteati/mia-category-core/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/dorototeati/mia-category-core/tsconfig.lib.json"
+              "tsConfig": "projects/doroteati/mia-category-core/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -30,30 +30,30 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dorototeati/mia-category-core/src/test.ts",
-            "tsConfig": "projects/dorototeati/mia-category-core/tsconfig.spec.json",
-            "karmaConfig": "projects/dorototeati/mia-category-core/karma.conf.js"
+            "main": "projects/doroteati/mia-category-core/src/test.ts",
+            "tsConfig": "projects/doroteati/mia-category-core/tsconfig.spec.json",
+            "karmaConfig": "projects/doroteati/mia-category-core/karma.conf.js"
           }
         }
       }
     },
-    "@dorototeati/mia-category-editor": {
+    "@doroteati/mia-category-editor": {
       "projectType": "library",
-      "root": "projects/dorototeati/mia-category-editor",
-      "sourceRoot": "projects/dorototeati/mia-category-editor/src",
+      "root": "projects/doroteati/mia-category-editor",
+      "sourceRoot": "projects/doroteati/mia-category-editor/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/dorototeati/mia-category-editor/ng-package.json"
+            "project": "projects/doroteati/mia-category-editor/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/dorototeati/mia-category-editor/tsconfig.lib.prod.json"
+              "tsConfig": "projects/doroteati/mia-category-editor/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/dorototeati/mia-category-editor/tsconfig.lib.json"
+              "tsConfig": "projects/doroteati/mia-category-editor/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -61,9 +61,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dorototeati/mia-category-editor/src/test.ts",
-            "tsConfig": "projects/dorototeati/mia-category-editor/tsconfig.spec.json",
-            "karmaConfig": "projects/dorototeati/mia-category-editor/karma.conf.js"
+            "main": "projects/doroteati/mia-category-editor/src/test.ts",
+            "tsConfig": "projects/doroteati/mia-category-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/doroteati/mia-category-editor/karma.conf.js"
           }
         }
       }
