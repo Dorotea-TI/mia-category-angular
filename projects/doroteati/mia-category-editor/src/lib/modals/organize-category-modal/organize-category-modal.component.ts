@@ -9,10 +9,7 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { MiaCategoryModalService } from '../mia-category.modal.service';
-import {
-  MiaCategory,
-  MiaCategoryService,
-} from 'projects/doroteati/mia-category-core/src/public-api';
+import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
 
 export class MiaOrganizeCategoryModalConfig {
   hasNewCategory?: boolean = true;

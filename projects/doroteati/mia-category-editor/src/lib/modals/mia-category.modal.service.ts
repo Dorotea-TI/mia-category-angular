@@ -8,13 +8,9 @@ import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import {
   MiaOrganizeCategoryModalConfig,
-  MiaOrganizeCategoryModalInteraction,
   OrganizeCategoryModalComponent,
 } from './organize-category-modal/organize-category-modal.component';
-import {
-  MiaCategory,
-  MiaCategoryService,
-} from 'projects/doroteati/mia-category-core/src/public-api';
+import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
 
 @Injectable({
   providedIn: 'root',
