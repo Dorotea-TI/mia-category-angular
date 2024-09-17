@@ -1,0 +1,32 @@
+<h5 mat-dialog-title class="mat-dialog-title">Organize</h5>
+<button matButton (click)="onClickNewCategory()">+ Add new Category</button>
+
+<mat-dialog-content>
+  <div *ngIf="!isLoading" class="content" cdkDropList [cdkDropListData]="categories" (cdkDropListDropped)="drop($event, true)">
+    <div *ngFor="let category of categories" class="example-container" cdkDrag>
+        <button cdkDragHandle>+-</button>
+        <h2>{{ category.title }}</h2>
+      
+        <div
+          cdkDropList
+          id="{{ 'drop-category-' + category.id }}"
+          [cdkDropListData]="category.items"
+          [cdkDropListConnectedTo]="dropListIds"
+          (cdkDropListDropped)="drop($event, false)">
+          <div class="example-box" *ngFor="let item of category.items" cdkDrag>
+
+                <button cdkDragHandle>+</button>
+
+              {{ item.title }}
+            </div>
+        </div>
+      </div>
+  </div>
+</mat-dialog-content>
+
+<div class="mat-dialog-actions" mat-dialog-actions>
+  <button *ngIf="!isSending" mat-stroked-button mat-dialog-close>Cancel</button>
+  <button *ngIf="!isSending" mat-raised-button color="primary" (click)="onClickSave()">Save</button>
+</div>
+
+<!-- Example Request -->
