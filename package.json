@@ -24,7 +24,7 @@
     "@angular/platform-browser": "^14.3.0",
     "@angular/platform-browser-dynamic": "^14.3.0",
     "@angular/router": "^14.3.0",
-    "@doroteati/mia-category-core": "^14.0.1",
+    "@doroteati/mia-category-core": "^14.0.2",
     "@doroteati/mia-core": "^14.0.1",
     "moment": "^2.29.1",
     "ngx-quill": "^16.1.1",
