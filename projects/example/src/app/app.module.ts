@@ -7,8 +7,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MiaCategoryCoreModule } from 'projects/doroteati/mia-category-core/src/public-api';
 import { MiaCategoryEditorModule } from 'projects/doroteati/mia-category-editor/src/public-api';
+import { MiaCategoryCoreModule } from '@doroteati/mia-category-core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,13 +18,13 @@ import { MiaCategoryEditorModule } from 'projects/doroteati/mia-category-editor/
     HttpClientModule,
     BrowserAnimationsModule,
     MiaCategoryCoreModule,
-    // MiaCategoryEditorModule,
+    MiaCategoryEditorModule,
   ],
   providers: [
     {
       provide: MIA_CORE_PROVIDER,
       useValue: {
-        baseUrl: 'https://dorotea-interno.uc.r.appspot.com/',
+        baseUrl: 'http://dorotea.test/',
       },
     },
   ],
