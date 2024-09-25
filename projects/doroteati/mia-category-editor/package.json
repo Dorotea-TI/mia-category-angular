@@ -2,7 +2,7 @@
   "name": "@doroteati/mia-category-editor",
   "version": "14.0.0",
   "peerDependencies": {
-    "@agencycoda/mia-form": "^14.2.1",
+    "@doroteati/mia-form": "^14.3.2",
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0"
   },
