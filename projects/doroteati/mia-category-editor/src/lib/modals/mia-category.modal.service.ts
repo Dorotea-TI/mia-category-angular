@@ -1,9 +1,3 @@
-import {
-  MiaField,
-  MiaFormConfig,
-  MiaFormModalComponent,
-  MiaFormModalConfig,
-} from '@agencycoda/mia-form';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import {
@@ -11,6 +5,12 @@ import {
   OrganizeCategoryModalComponent,
 } from './organize-category-modal/organize-category-modal.component';
 import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
+import {
+  MiaField,
+  MiaFormConfig,
+  MiaFormModalComponent,
+  MiaFormModalConfig,
+} from '@doroteati/mia-form';
 
 @Injectable({
   providedIn: 'root',
