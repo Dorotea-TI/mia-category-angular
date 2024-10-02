@@ -1,8 +1,8 @@
 {
   "name": "@doroteati/mia-category-editor",
-  "version": "14.0.0",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@doroteati/mia-form": "^14.3.2",
+    "@doroteati/mia-form": "^14.3.3",
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0"
   },
