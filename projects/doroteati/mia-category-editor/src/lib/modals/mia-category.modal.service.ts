@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import {
   MiaOrganizeCategoryModalConfig,
   OrganizeCategoryModalComponent,
@@ -11,6 +10,7 @@ import {
   MiaFormModalComponent,
   MiaFormModalConfig,
 } from '@doroteati/mia-form';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable({
   providedIn: 'root',
