@@ -1,6 +1,5 @@
 import { MiaQuery } from '@doroteati/mia-core';
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import {
@@ -10,6 +9,7 @@ import {
 } from '@angular/cdk/drag-drop';
 import { MiaCategoryModalService } from '../mia-category.modal.service';
 import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 export class MiaOrganizeCategoryModalConfig {
   hasNewCategory?: boolean = true;
