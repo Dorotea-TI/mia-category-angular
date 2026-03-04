@@ -1,10 +1,10 @@
 {
   "name": "@doroteati/mia-category-editor",
-  "version": "17.0.0",
+  "version": "21.0.0",
   "peerDependencies": {
-    "@doroteati/mia-form": "^17.0.3",
-    "@angular/common": ">=17.0.0",
-    "@angular/core": ">=17.0.0"
+    "@doroteati/mia-form": "^21.0.0",
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

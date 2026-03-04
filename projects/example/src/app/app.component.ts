@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { MiaCategoryModalService } from 'projects/doroteati/mia-category-editor/src/public-api';
+import { MiaCategoryModalService } from '@doroteati/mia-category-editor';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   constructor(protected categoryModal: MiaCategoryModalService) {}

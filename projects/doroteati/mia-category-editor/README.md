@@ -1,25 +1,43 @@
-# MiaCategoryEditor
+# @doroteati/mia-category-editor
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.
+Libreria editor para categorias (Angular 21).
 
-## Code scaffolding
+## Compatibilidad
 
-Run `ng generate component component-name --project mia-category-editor` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project mia-category-editor`.
+- Apps `NgModule`
+- Apps `standalone`
+- SSR (Angular Universal / `@angular/ssr`)
 
-> Note: Don't forget to add `--project mia-category-editor` or else it will be added to the default project in your `angular.json` file.
+## Uso en apps standalone
 
-## Build
+Importa el componente standalone cuando lo necesites:
 
-Run `ng build mia-category-editor` to build the project. The build artifacts will be stored in the `dist/` directory.
+```ts
+import { OrganizeCategoryModalComponent } from '@doroteati/mia-category-editor';
+```
 
-## Publishing
+Servicio:
 
-After building your library with `ng build mia-category-editor`, go to the dist folder `cd dist/mia-category-editor` and run `npm publish`.
+```ts
+import { MiaCategoryModalService } from '@doroteati/mia-category-editor';
+```
 
-## Running unit tests
+## Uso en apps con modulos
 
-Run `ng test mia-category-editor` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+import { MiaCategoryEditorModule } from '@doroteati/mia-category-editor';
 
-## Further help
+@NgModule({
+  imports: [MiaCategoryEditorModule]
+})
+export class AppModule {}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Build local
+
+Desde la raiz del workspace:
+
+```bash
+npm run build:editor
+```
+

@@ -1,25 +1,33 @@
-# MiaCategoryCore
+# @doroteati/mia-category-core
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.
+Core de categorias para Angular 21.
 
-## Code scaffolding
+## Compatibilidad
 
-Run `ng generate component component-name --project mia-category-core` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project mia-category-core`.
+- Apps `NgModule`
+- Apps `standalone`
+- SSR
 
-> Note: Don't forget to add `--project mia-category-core` or else it will be added to the default project in your `angular.json` file.
+## Configuracion minima
 
-## Build
+```ts
+import { MIA_CORE_PROVIDER } from '@doroteati/mia-core';
 
-Run `ng build mia-category-core` to build the project. The build artifacts will be stored in the `dist/` directory.
+providers: [
+  {
+    provide: MIA_CORE_PROVIDER,
+    useValue: {
+      baseUrl: 'https://api.tu-dominio.com/'
+    }
+  }
+]
+```
 
-## Publishing
+## Build local
 
-After building your library with `ng build mia-category-core`, go to the dist folder `cd dist/mia-category-core` and run `npm publish`.
+Desde la raiz del workspace:
 
-## Running unit tests
+```bash
+npm run build:core
+```
 
-Run `ng test mia-category-core` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,8 +1,10 @@
 import { MiaQuery } from '@doroteati/mia-core';
 import { Component, Inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import {
+  DragDropModule,
   CdkDragDrop,
   moveItemInArray,
   transferArrayItem,
@@ -10,6 +12,8 @@ import {
 import { MiaCategoryModalService } from '../mia-category.modal.service';
 import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 export class MiaOrganizeCategoryModalConfig {
   hasNewCategory?: boolean = true;
@@ -30,6 +34,8 @@ export class MiaOrganizeCategoryModalInteraction {
   selector: 'mia-organize-category-modal',
   templateUrl: './organize-category-modal.component.html',
   styleUrls: ['./organize-category-modal.component.css'],
+  standalone: true,
+  imports: [CommonModule, MatDialogModule, MatButtonModule, DragDropModule],
 })
 export class OrganizeCategoryModalComponent implements OnInit {
   categories = new Array<MiaCategory | any>();
@@ -89,16 +95,16 @@ export class OrganizeCategoryModalComponent implements OnInit {
     this.dropListIds = new Array<string>();
 
     this.obCategories()
-      .pipe(tap((res) => (this.categories = res.data)))
       .pipe(
-        tap((res) =>
-          this.categories.map((c) =>
+        tap((res: any) => {
+          this.categories = res.data;
+          this.categories.forEach((c) =>
             this.dropListIds.push('drop-category-' + c.id)
-          )
-        )
+          );
+        })
       )
       .pipe(
-        map((res) =>
+        map(() =>
           this.categories.map(
             (c) =>
               (c.items = items.filter(
@@ -107,7 +113,7 @@ export class OrganizeCategoryModalComponent implements OnInit {
           )
         )
       )
-      .subscribe((res) => (this.isLoading = false));
+      .subscribe(() => (this.isLoading = false));
   }
 
   obCategories() {

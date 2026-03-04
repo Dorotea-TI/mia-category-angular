@@ -6,10 +6,12 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@doroteati/mia-category-core": [
+        "projects/doroteati/mia-category-core/src/public-api.ts",
         "dist/doroteati/mia-category-core/doroteati-mia-category-core",
         "dist/doroteati/mia-category-core"
       ],
       "@doroteati/mia-category-editor": [
+        "projects/doroteati/mia-category-editor/src/public-api.ts",
         "dist/doroteati/mia-category-editor/doroteati-mia-category-editor",
         "dist/doroteati/mia-category-editor"
       ]
@@ -22,13 +24,13 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
+    "skipLibCheck": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
-    "lib": ["es2018", "dom"],
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
