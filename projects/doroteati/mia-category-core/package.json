@@ -1,6 +1,6 @@
 {
   "name": "@doroteati/mia-category-core",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "peerDependencies": {
     "@doroteati/mia-core": "^21.0.0",
     "@angular/common": ">=21.0.0",
