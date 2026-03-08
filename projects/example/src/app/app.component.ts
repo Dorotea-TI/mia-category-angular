@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { MiaCategoryModalService } from '@doroteati/mia-category-editor';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    imports: [RouterOutlet],
 })
 export class AppComponent {
   constructor(protected categoryModal: MiaCategoryModalService) {}

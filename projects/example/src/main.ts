@@ -1,12 +1,22 @@
-import { enableProdMode, provideZoneChangeDetection } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MIA_CORE_PROVIDER } from '@doroteati/mia-core';
+import { provideMiaForm } from '@doroteati/mia-form';
+import { AppComponent } from './app/app.component';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule, { applicationProviders: [provideZoneChangeDetection()], })
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter([]),
+    provideHttpClient(withInterceptorsFromDi()),
+    provideAnimationsAsync(),
+    provideMiaForm(),
+    {
+      provide: MIA_CORE_PROVIDER,
+      useValue: {
+        baseUrl: 'http://localhost/',
+      },
+    },
+  ],
+}).catch((err) => console.error(err));

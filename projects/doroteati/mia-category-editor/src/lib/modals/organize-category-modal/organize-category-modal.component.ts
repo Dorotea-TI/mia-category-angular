@@ -1,5 +1,5 @@
 import { MiaQuery } from '@doroteati/mia-core';
-import { Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
@@ -51,7 +51,8 @@ export class OrganizeCategoryModalComponent implements OnInit {
     protected dialogRef: MatDialogRef<OrganizeCategoryModalComponent>,
     @Inject(MAT_DIALOG_DATA) public config: MiaOrganizeCategoryModalConfig,
     protected categoryService: MiaCategoryService,
-    protected categoryModal: MiaCategoryModalService
+    protected categoryModal: MiaCategoryModalService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -113,7 +114,10 @@ export class OrganizeCategoryModalComponent implements OnInit {
           )
         )
       )
-      .subscribe(() => (this.isLoading = false));
+      .subscribe(() => {
+        this.isLoading = false;
+        this.cdr.detectChanges();
+      });
   }
 
   obCategories() {

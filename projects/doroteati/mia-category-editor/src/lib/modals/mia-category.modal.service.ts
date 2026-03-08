@@ -5,8 +5,12 @@ import {
 } from './organize-category-modal/organize-category-modal.component';
 import { MiaCategory, MiaCategoryService } from '@doroteati/mia-category-core';
 import { MatDialog } from '@angular/material/dialog';
-
-declare const require: (module: string) => any;
+import {
+  MiaFormModalConfig,
+  MiaFormConfig,
+  MiaField,
+  MiaFormModalComponent,
+} from '@doroteati/mia-form';
 
 @Injectable({
   providedIn: 'root',
@@ -18,20 +22,18 @@ export class MiaCategoryModalService {
   ) {}
 
   open(category: MiaCategory) {
-    // Delay mia-form resolution to runtime to avoid hard type coupling during library compilation.
-    const miaFormLib: any = require('@doroteati/mia-form');
-    let data = new miaFormLib.MiaFormModalConfig();
+    let data = new MiaFormModalConfig();
     data.item = category;
     data.service = this.categoryService;
     data.titleNew = 'New Category';
     data.titleEdit = 'Edit Category';
 
-    let config = new miaFormLib.MiaFormConfig();
+    let config = new MiaFormConfig();
     config.hasSubmit = false;
     config.fields = [
       {
         key: 'title',
-        type: miaFormLib.MiaField.TYPE_STRING,
+        type: MiaField.TYPE_STRING,
         label: 'Name Category',
       },
     ];
@@ -40,7 +42,7 @@ export class MiaCategoryModalService {
     ];
     data.config = config;
     return this.dialog
-      .open(miaFormLib.MiaFormModalComponent, {
+      .open(MiaFormModalComponent, {
         width: '520px',
         panelClass: 'modal-full-width-mobile',
         data: data,

@@ -5,14 +5,9 @@
 /**
  * Services
  */
- export * from './lib/modals/mia-category.modal.service';
-
- /**
- * Modals
- */
-  export * from './lib/modals/organize-category-modal/organize-category-modal.component';
+export * from './lib/modals/mia-category.modal.service';
 
 /**
- * Module
+ * Modals
  */
-export * from './lib/mia-category-editor.module';
+export * from './lib/modals/organize-category-modal/organize-category-modal.component';
